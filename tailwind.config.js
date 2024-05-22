@@ -9,7 +9,9 @@ module.exports = withMT({
   darkMode: "class", // Enable class-based dark mode
 
   theme: {
-    extend: {},
+    extend: {
+      screens: { xsm: "325px" },
+    },
   },
   plugins: [],
 });

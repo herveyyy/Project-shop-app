@@ -33,9 +33,10 @@ const navListItems = [
     icon: UserGroupIcon,
   },
 ];
+
 function NavList() {
   return (
-    <ul className="mt-2 mb-4 flex flex-col gap-2 md:mb-0 md:mt-0 md:flex-row md:items-center">
+    <ul className="mt-2 mb-4 flex flex-col gap-2 md:mb-0 md:mt-0 md:flex-row md:items-center ">
       {navListItems.map(({ label, icon }, key) => (
         <Typography
           key={label}
@@ -44,7 +45,7 @@ function NavList() {
           color="gray"
           className="font-medium text-blue-gray-500"
         >
-          <MenuItem className="flex items-center gap-2 md:rounded-full dark:text-white  dark:hover:bg-gray-900">
+          <MenuItem className="flex items-center gap-2 md:rounded-full dark:text-white dark:hover:bg-gray-900">
             {React.createElement(icon, { className: "h-[18px] w-[18px]" })}{" "}
             <span className="text-gray-900 dark:!text-white"> {label}</span>
           </MenuItem>
@@ -53,6 +54,7 @@ function NavList() {
     </ul>
   );
 }
+
 export function UserNavbar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
@@ -75,7 +77,7 @@ export function UserNavbar() {
   }, []);
 
   return (
-    <Navbar className="mx-auto max-w-screen-xl p-2 md:rounded-full md:pl-6 !bg-white dark:!bg-black dark:!border-gray-800">
+    <Navbar className="backdrop-blur-md mx-auto max-w-screen-xl p-2 md:rounded-full md:pl-6 bg-white/70 dark:bg-black/70 dark:border-gray-800  sticky">
       <div className="relative mx-auto flex items-center justify-between text-blue-gray-900">
         <Typography
           as="a"
@@ -84,23 +86,23 @@ export function UserNavbar() {
         >
           Project Shop
         </Typography>
-        <div className="hidden md:block   md:w-[60%] ">
-          <div className="flex justify-center ">
+        <div className="hidden md:block md:w-[60%]">
+          <div className="flex justify-center">
             <NavList />
           </div>
         </div>
-        <div className="w-full md:hidden flex justify-end ">
+        <div className="w-full md:hidden flex justify-end">
           <IconButton
             size="sm"
             color="blue-gray"
             onClick={() => setDarkMode(!darkMode)}
             variant="text"
-            className=" mr-2 "
+            className="mr-2"
           >
             {!darkMode ? (
-              <MoonIcon className="h-6 w-6 " />
+              <MoonIcon className="h-6 w-6" />
             ) : (
-              <SunIcon className="h-6 w-6 dark:!text-white" />
+              <SunIcon className="h-6 w-6 dark:text-white" />
             )}
           </IconButton>
           <IconButton
@@ -108,7 +110,7 @@ export function UserNavbar() {
             color="blue-gray"
             variant="text"
             onClick={toggleIsNavOpen}
-            className=" mr-2 md:hidden "
+            className="mr-2 md:hidden"
           >
             <Bars2Icon className="h-6 w-6" />
           </IconButton>
@@ -119,16 +121,16 @@ export function UserNavbar() {
           color="blue-gray"
           onClick={() => setDarkMode(!darkMode)}
           variant="text"
-          className="ml-auto mr-2 md:w-[20%] hidden md:block "
+          className="ml-auto mr-2 md:w-[20%] hidden md:block"
         >
           {!darkMode ? (
             <MoonIcon className="h-6 w-6" />
           ) : (
-            <SunIcon className="h-6 w-6 dark:!text-white" />
+            <SunIcon className="h-6 w-6 dark:text-white" />
           )}
         </IconButton>
       </div>
-      <Collapse open={isNavOpen} className="overflow-scroll md:hidden ">
+      <Collapse open={isNavOpen} className="overflow-scroll md:hidden">
         <NavList />
       </Collapse>
     </Navbar>

@@ -6,6 +6,12 @@ import {
   MenuItem,
   Collapse,
   IconButton,
+  Timeline,
+  TimelineItem,
+  TimelineConnector,
+  TimelineHeader,
+  TimelineIcon,
+  TimelineBody,
 } from "@material-tailwind/react";
 import {
   CubeTransparentIcon,
@@ -18,6 +24,7 @@ import {
   BuildingStorefrontIcon,
 } from "@heroicons/react/24/solid";
 import { UserCircleIcon } from "@heroicons/react/24/outline";
+
 export {
   ThemeProvider,
   Button,
@@ -35,4 +42,10 @@ export {
   UserGroupIcon,
   BuildingStorefrontIcon,
   UserCircleIcon,
+  Timeline,
+  TimelineItem,
+  TimelineConnector,
+  TimelineHeader,
+  TimelineIcon,
+  TimelineBody,
 };
