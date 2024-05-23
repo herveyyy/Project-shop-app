@@ -41,14 +41,14 @@ const LandingPage = () => {
                 type=""
                 className="text-center !text-white mt-10"
               >
-                "Welcome to Thrift Crate PH, your gateway to a world of curated
-                vintage treasures and unique finds! Delve into our collection
-                and uncover hidden gems that exude timeless charm. Whether
-                you're a seasoned collector or just beginning your journey into
-                the world of thrift, we're here to make your experience
-                unforgettable. Take your time, browse through our selection, and
-                let the nostalgia of vintage items transport you to another era.
-                Happy hunting!"{" "}
+                &quot; Welcome to Thrift Crate PH, your gateway to a world of
+                curated vintage treasures and unique finds! Delve into our
+                collection and uncover hidden gems that exude timeless charm.
+                Whether you&apos;re a seasoned collector or just beginning your
+                journey into the world of thrift, we&apos;re here to make your
+                experience unforgettable. Take your time, browse through our
+                selection, and let the nostalgia of vintage items transport you
+                to another era. Happy hunting! &quot;
               </Typography>
             </div>
           </div>
