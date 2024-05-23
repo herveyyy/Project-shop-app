@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import LandingImage from "../public/BG.jpg";
 import {
@@ -14,6 +12,12 @@ import {
   TimelineBody,
 } from "../components/ClientSide";
 const LandingPage = () => {
+  const theme = useTheme();
+
+  if (!theme) {
+    return null; // Or some fallback UI
+  }
+
   return (
     <div className="">
       <div className=" overflow-y-hidden">
