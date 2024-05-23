@@ -19,7 +19,7 @@ const LandingPage = () => {
           <Image
             src={LandingImage}
             loading="lazy"
-            className="  object-cover w-full  h-[125vh] xsm:h-[100vh] sm:h-[85vh] -translate-y-28  md:translate-x-0  md:translate-y-0  md:h-[75vh] lg:h-[90vh]  scale-125  md:scale-100 object-bottom "
+            className="  object-cover w-full -translate-x-11 sm:-translate-x-0  h-[125vh] xsm:h-[100vh] sm:h-[85vh] -translate-y-28  md:translate-x-0  md:translate-y-0  md:h-[75vh] lg:h-[90vh]  scale-125  md:scale-100 object-bottom "
           />
         </div>
         {/* Title Card */}
