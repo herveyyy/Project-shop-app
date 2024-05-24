@@ -1,5 +1,4 @@
 "use client";
-import { ThemeProvider, Button } from "@material-tailwind/react";
 import {
   Navbar,
   Typography,
@@ -12,6 +11,8 @@ import {
   TimelineHeader,
   TimelineIcon,
   TimelineBody,
+  ThemeProvider,
+  Button,
 } from "@material-tailwind/react";
 import {
   CubeTransparentIcon,
