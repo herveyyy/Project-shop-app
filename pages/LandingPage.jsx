@@ -1,12 +1,12 @@
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import LandingImage from "../public/BG.jpg";
-import {
-  IconButton,
-  Typography,
-  BuildingStorefrontIcon,
-} from "../components/ClientSide";
+import { IconButton, BuildingStorefrontIcon } from "../components/ClientSide";
 
+const Typography = dynamic(
+  () => import("../components/ClientSide").then((mod) => mod.Typography),
+  { ssr: false }
+);
 const Timeline = dynamic(
   () => import("../components/ClientSide").then((mod) => mod.Timeline),
   { ssr: false }
