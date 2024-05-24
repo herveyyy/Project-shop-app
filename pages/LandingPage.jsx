@@ -1,8 +1,10 @@
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import LandingImage from "../public/BG.jpg";
 import { IconButton, BuildingStorefrontIcon } from "../components/ClientSide";
 
+// Dynamic imports with no SSR
 const Typography = dynamic(
   () => import("../components/ClientSide").then((mod) => mod.Typography),
   { ssr: false }
@@ -33,6 +35,16 @@ const TimelineBody = dynamic(
 );
 
 const LandingPage = () => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return null; // Render nothing until we are on the client side
+  }
+
   return (
     <div className="">
       <div className="overflow-y-hidden">
