@@ -1,10 +1,8 @@
-import { useEffect, useState } from "react";
+"use client";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import LandingImage from "../public/BG.jpg";
 import { IconButton, BuildingStorefrontIcon } from "../components/ClientSide";
-
-// Dynamic imports with no SSR
 const Typography = dynamic(
   () => import("../components/ClientSide").then((mod) => mod.Typography),
   { ssr: false }
@@ -35,38 +33,33 @@ const TimelineBody = dynamic(
 );
 
 const LandingPage = () => {
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  if (!isClient) {
-    return null; // Render nothing until we are on the client side
-  }
-
   return (
     <div className="">
-      <div className="overflow-y-hidden">
-        <div className="w-full overflow-hidden absolute -z-50">
+      <div className=" overflow-y-hidden">
+        <div className="w-full  overflow-hidden absolute -z-50 ">
           <Image
             src={LandingImage}
             loading="lazy"
             alt="bg"
-            className="object-cover w-full -translate-x-11 sm:-translate-x-0 h-[125vh] xsm:h-[100vh] sm:h-[85vh] -translate-y-28 md:translate-x-0 md:translate-y-0 md:h-[75vh] lg:h-[90vh] scale-125 md:scale-100 object-bottom"
+            className="  object-cover w-full -translate-x-11 sm:-translate-x-0  h-[125vh] xsm:h-[100vh] sm:h-[85vh] -translate-y-28  md:translate-x-0  md:translate-y-0  md:h-[75vh] lg:h-[90vh]  scale-125  md:scale-100 object-bottom "
           />
         </div>
         {/* Title Card */}
-        <div className="w-full">
-          <div className="mt-32">
+        <div className="w-full ">
+          <div className=" mt-32">
             {/* Title */}
-            <Typography variant="h1" className="text-center !text-white">
+            <Typography
+              variant="h1"
+              type=""
+              className="text-center !text-white"
+            >
               Thrift Crate PH
             </Typography>
             {/* Details */}
-            <div className="mx-0 sm:mx-10 md:mx-24 lg:mx-56">
+            <div className=" mx-0 sm:mx-10 md:mx-24 lg:mx-56">
               <Typography
                 variant="paragraph"
+                type=""
                 className="text-center !text-white mt-10"
               >
                 &quot; Welcome to Thrift Crate PH, your gateway to a world of
@@ -82,8 +75,8 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center md:my-5 lg:mt-16 xl:mt-32 my-10">
-        <button className="border-white !text-white border-2 p-2 rounded-lg flex gap-1 backdrop-blur-md bg-white/5 dark:bg-black dark:hover:bg-black hover:text-black dark:hover:text-black hover:bg-black duration-500">
+      <div className="flex justify-center md:my-5 lg:mt-16 xl:mt-32 my-10 ">
+        <button className="border-white !text-white border-2 p-2 rounded-lg flex gap-1 backdrop-blur-md bg-white/5 dark:bg-black dark:hover:bg-black hover:text-black dark:hover:text-black hover:bg-black  duration-500">
           <div className="w-5 h-5">
             <BuildingStorefrontIcon />
           </div>
