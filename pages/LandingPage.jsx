@@ -3,15 +3,34 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 import LandingImage from "../public/BG.jpg";
 import { IconButton, BuildingStorefrontIcon } from "../components/ClientSide";
-import {
-  Typography,
-  Timeline,
-  TimelineItem,
-  TimelineConnector,
-  TimelineHeader,
-  TimelineIcon,
-  TimelineBody,
-} from "../components/ClientSide";
+const Typography = dynamic(
+  () => import("../components/ClientSide").then((mod) => mod.Typography),
+  { ssr: false }
+);
+const Timeline = dynamic(
+  () => import("../components/ClientSide").then((mod) => mod.Timeline),
+  { ssr: false }
+);
+const TimelineItem = dynamic(
+  () => import("../components/ClientSide").then((mod) => mod.TimelineItem),
+  { ssr: false }
+);
+const TimelineConnector = dynamic(
+  () => import("../components/ClientSide").then((mod) => mod.TimelineConnector),
+  { ssr: false }
+);
+const TimelineHeader = dynamic(
+  () => import("../components/ClientSide").then((mod) => mod.TimelineHeader),
+  { ssr: false }
+);
+const TimelineIcon = dynamic(
+  () => import("../components/ClientSide").then((mod) => mod.TimelineIcon),
+  { ssr: false }
+);
+const TimelineBody = dynamic(
+  () => import("../components/ClientSide").then((mod) => mod.TimelineBody),
+  { ssr: false }
+);
 
 const LandingPage = () => {
   return (
