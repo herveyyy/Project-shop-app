@@ -3,7 +3,7 @@
   "short_name": "PSPSPSPS App",
   "icons": [
     {
-      "src": "./vercel.svg",
+      "src": "./logo.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
