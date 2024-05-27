@@ -7,41 +7,41 @@ const Typography = dynamic(
   () => import("../components/ClientSide").then((mod) => mod.Typography),
   { ssr: false }
 );
-const Timeline = dynamic(
-  () => import("../components/ClientSide").then((mod) => mod.Timeline),
-  { ssr: false }
-);
-const TimelineItem = dynamic(
-  () => import("../components/ClientSide").then((mod) => mod.TimelineItem),
-  { ssr: false }
-);
-const TimelineConnector = dynamic(
-  () => import("../components/ClientSide").then((mod) => mod.TimelineConnector),
-  { ssr: false }
-);
-const TimelineHeader = dynamic(
-  () => import("../components/ClientSide").then((mod) => mod.TimelineHeader),
-  { ssr: false }
-);
-const TimelineIcon = dynamic(
-  () => import("../components/ClientSide").then((mod) => mod.TimelineIcon),
-  { ssr: false }
-);
-const TimelineBody = dynamic(
-  () => import("../components/ClientSide").then((mod) => mod.TimelineBody),
-  { ssr: false }
-);
+// const Timeline = dynamic(
+//   () => import("../components/ClientSide").then((mod) => mod.Timeline),
+//   { ssr: false }
+// );
+// const TimelineItem = dynamic(
+//   () => import("../components/ClientSide").then((mod) => mod.TimelineItem),
+//   { ssr: false }
+// );
+// const TimelineConnector = dynamic(
+//   () => import("../components/ClientSide").then((mod) => mod.TimelineConnector),
+//   { ssr: false }
+// );
+// const TimelineHeader = dynamic(
+//   () => import("../components/ClientSide").then((mod) => mod.TimelineHeader),
+//   { ssr: false }
+// );
+// const TimelineIcon = dynamic(
+//   () => import("../components/ClientSide").then((mod) => mod.TimelineIcon),
+//   { ssr: false }
+// );
+// const TimelineBody = dynamic(
+//   () => import("../components/ClientSide").then((mod) => mod.TimelineBody),
+//   { ssr: false }
+// );
 
 const LandingPage = () => {
   return (
     <div className="">
       <div className=" overflow-y-hidden">
-        <div className="w-full  overflow-hidden absolute -z-50 ">
+        <div className="w-full overflow-hidden absolute -z-50 ">
           <Image
             src={LandingImage}
             loading="lazy"
             alt="bg"
-            className="  object-cover w-full -translate-x-11 sm:-translate-x-0  h-[125vh] xsm:h-[100vh] sm:h-[85vh] -translate-y-28  md:translate-x-0  md:translate-y-0  md:h-[75vh] lg:h-[90vh]  scale-125  md:scale-100 object-bottom "
+            className="  object-cover w-full   xsm:-translate-x-0 sm:-translate-x-11  h-[125vh] xsm:h-[100vh] sm:h-[85vh] -translate-y-28  md:translate-x-0  md:translate-y-0  md:h-[75vh] lg:h-[90vh]  scale-125  md:scale-100 object-bottom "
           />
         </div>
         {/* Title Card */}
@@ -83,93 +83,21 @@ const LandingPage = () => {
           Browse
         </button>
       </div>
-      <div className="flex flex-wrap lg:flex-nowrap justify-center gap-x-4">
-        <div className="w-1/2">
-          <div className="">
-            <Timeline>
-              <TimelineItem>
-                <TimelineConnector />
-                <TimelineHeader className="h-3">
-                  <TimelineIcon />
-                  <Typography
-                    variant="h6"
-                    color="blue-gray"
-                    className="leading-none"
-                  >
-                    Timeline Title Here.
-                  </Typography>
-                </TimelineHeader>
-                <TimelineBody className="pb-8">
-                  <Typography
-                    variant="small"
-                    color="gary"
-                    className="font-normal text-gray-600"
-                  >
-                    The key to more success is to have a lot of pillows. Put it
-                    this way, it took me twenty five years to get these plants,
-                    twenty five years of blood sweat and tears, and I&apos;m
-                    never giving up, I&apos;m just getting started. I&apos;m up
-                    to something. Fan luv.
-                  </Typography>
-                </TimelineBody>
-              </TimelineItem>
-              <TimelineItem>
-                <TimelineConnector />
-                <TimelineHeader className="h-3">
-                  <TimelineIcon />
-                  <Typography
-                    variant="h6"
-                    color="blue-gray"
-                    className="leading-none"
-                  >
-                    Timeline Title Here.
-                  </Typography>
-                </TimelineHeader>
-                <TimelineBody className="pb-8">
-                  <Typography
-                    variant="small"
-                    color="gary"
-                    className="font-normal text-gray-600"
-                  >
-                    The key to more success is to have a lot of pillows. Put it
-                    this way, it took me twenty five years to get these plants,
-                    twenty five years of blood sweat and tears, and I&apos;m
-                    never giving up, I&apos;m just getting started. I&apos;m up
-                    to something. Fan luv.
-                  </Typography>
-                </TimelineBody>
-              </TimelineItem>
-              <TimelineItem>
-                <TimelineHeader className="h-3">
-                  <TimelineIcon />
-                  <Typography
-                    variant="h6"
-                    color="blue-gray"
-                    className="leading-none"
-                  >
-                    Timeline Title Here.
-                  </Typography>
-                </TimelineHeader>
-                <TimelineBody>
-                  <Typography
-                    variant="small"
-                    color="gary"
-                    className="font-normal text-gray-600"
-                  >
-                    The key to more success is to have a lot of pillows. Put it
-                    this way, it took me twenty five years to get these plants,
-                    twenty five years of blood sweat and tears, and I&apos;m
-                    never giving up, I&apos;m just getting started. I&apos;m up
-                    to something. Fan luv.
-                  </Typography>
-                </TimelineBody>
-              </TimelineItem>
-            </Timeline>
+      <div>
+        <div className="mt-10 w-full lg:flex justify-center  ">
+          <div className="flex-wrap gap-x-2 w-full lg:w-1/3 lg:bg-white lg:rounded-xl flex justify-center items-center bg-white/50 border-y dark:bg-black/50 backdrop-blur-md border-gray-700 duration-700 ">
+            <Typography
+              className=" text-gray-800 dark:text-gray-100  text-center"
+              variant="h2"
+            >
+              Recently Added
+            </Typography>
+            <div className="h-8 w-8 ">
+              <BuildingStorefrontIcon className=" text-gray-800 dark:text-gray-100" />
+            </div>
           </div>
         </div>
-        <div className="w-1/2"></div>
       </div>
-      {/* Timeline Card */}
     </div>
   );
 };

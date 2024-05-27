@@ -14,15 +14,16 @@ import {
   UserCircleIcon,
 } from "./ClientSide";
 import React, { useState, useEffect } from "react";
+import { TbShoe, TbShirt } from "react-icons/tb";
 
 const navListItems = [
   {
-    label: "Male",
-    icon: SolidIconUser,
+    label: "Shoes",
+    icon: TbShoe,
   },
   {
-    label: "Female",
-    icon: UserCircleIcon,
+    label: "Clothing",
+    icon: TbShirt,
   },
   {
     label: "Browse",
