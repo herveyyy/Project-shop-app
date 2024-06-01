@@ -15,39 +15,53 @@ import {
 } from "./ClientSide";
 import React, { useState, useEffect } from "react";
 import { TbShoe, TbShirt } from "react-icons/tb";
+import { useRouter } from "next/navigation";
 
 const navListItems = [
   {
     label: "Shoes",
-    icon: TbShoe,
+    Icon: TbShoe,
+    link: "/browse",
+    productType: "shoes",
   },
   {
     label: "Clothing",
-    icon: TbShirt,
+    Icon: TbShirt,
+    link: "/browse",
+    productType: "cloths",
   },
   {
     label: "Browse",
-    icon: BuildingStorefrontIcon,
+    Icon: BuildingStorefrontIcon,
+    link: "/browse",
+    productType: "all",
   },
   {
     label: "About Us",
-    icon: UserGroupIcon,
+    Icon: UserGroupIcon,
+    link: "/aboutus",
   },
 ];
 
 function NavList() {
+  const router = useRouter();
+
   return (
     <ul className="mt-2 mb-4 flex flex-col gap-2 md:mb-0 md:mt-0 md:flex-row md:items-center ">
-      {navListItems.map(({ label, icon }, key) => (
+      {navListItems.map(({ label, Icon, link, productType }, key) => (
         <Typography
           key={label}
           as="icon"
           variant="small"
           color="gray"
           className="font-medium text-blue-gray-500"
+          onClick={() => {
+            console.log(productType);
+            router.push(link);
+          }}
         >
           <MenuItem className="flex items-center gap-2 md:rounded-full dark:text-white dark:hover:bg-gray-900">
-            {React.createElement(icon, { className: "h-[18px] w-[18px]" })}{" "}
+            {React.createElement(Icon, { className: "h-[18px] w-[18px]" })}
             <span className="text-gray-900 dark:!text-white"> {label}</span>
           </MenuItem>
         </Typography>
@@ -76,17 +90,19 @@ export function UserNavbar() {
       () => window.innerWidth >= 960 && setIsNavOpen(false)
     );
   }, []);
+  const router = useRouter();
 
   return (
     <Navbar className="backdrop-blur-md mx-auto max-w-screen-xl p-2 md:rounded-full md:pl-6 bg-white/70 dark:bg-black/70 dark:border-gray-800  sticky">
       <div className="relative mx-auto flex items-center justify-between text-blue-gray-900">
         <Typography
           as="a"
-          href="#"
+          onClick={() => router.push("/")}
           className="mr-4 ml-2 cursor-pointer py-1.5 font-medium md:w-[20%] w-40 dark:text-white"
         >
           Project Shop
         </Typography>
+
         <div className="hidden md:block md:w-[60%]">
           <div className="flex justify-center">
             <NavList />

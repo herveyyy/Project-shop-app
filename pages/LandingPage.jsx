@@ -2,6 +2,8 @@
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import LandingImage from "../public/BG.jpg";
+import { Suspense } from "react";
+
 import { IconButton, BuildingStorefrontIcon } from "../components/ClientSide";
 const Typography = dynamic(
   () => import("../components/ClientSide").then((mod) => mod.Typography),
