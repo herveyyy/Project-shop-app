@@ -1,10 +1,11 @@
-"use client";
+// "use client";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import LandingImage from "../public/BG.jpg";
 import { Suspense } from "react";
 
 import { IconButton, BuildingStorefrontIcon } from "../components/ClientSide";
+import ImagesSlide from "@/components/ImagesSlide";
 const Typography = dynamic(
   () => import("../components/ClientSide").then((mod) => mod.Typography),
   { ssr: false }
@@ -36,7 +37,7 @@ const Typography = dynamic(
 
 const LandingPage = () => {
   return (
-    <div className="">
+    <div className="w-full ">
       <div className=" overflow-y-hidden">
         <div className="w-full overflow-hidden absolute -z-50 ">
           <Image
@@ -98,6 +99,10 @@ const LandingPage = () => {
               <BuildingStorefrontIcon className=" text-gray-800 dark:text-gray-100" />
             </div>
           </div>
+        </div>
+        {/* Slider for Image */}
+        <div className="w-full  justify-center my-12">
+          <ImagesSlide />
         </div>
       </div>
     </div>
