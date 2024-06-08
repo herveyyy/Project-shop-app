@@ -1,9 +1,10 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "../components/ClientSide.jsx";
+import { ThemeProvider,Typography } from "../components/ClientSide.jsx";
 import { UserNavbar } from "@/components/UserNavbar";
 const inter = Inter({ subsets: ["latin"] });
 import NextTopLoader from "nextjs-toploader";
+import Footer from "@/components/Footer";
 export const metadata = {
   title: "Project Shop App",
   description: "My love, My Life",
@@ -51,6 +52,10 @@ export default function RootLayout({ children }) {
           </header>
           {children}
         </body>
+    
+
+        <Footer/>
+
       </ThemeProvider>
     </html>
   );

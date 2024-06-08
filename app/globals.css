@@ -21,3 +21,6 @@ body {
 .loader {
   animation: spin 1s linear infinite;
 }
+.scroll-hide::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
